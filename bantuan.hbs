@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{judul}}</title>
+  <link rel="icon" href="/img/cuaca.png">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/app.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main-content">
+    {{>header}}
+
+    <h2 style="text-align:center; margin-bottom:20px;">Halaman Bantuan (FAQ)</h2>
+
+    <div style="max-width:700px; margin:auto; line-height:1.7;">
+
+      <h3>1. Halaman ini digunakan untuk apa?</h3>
+      <p>Halaman ini digunakan untuk membantu pengguna memahami cara kerja aplikasi dan informasi seputar API.</p>
+
+      <h3>2. Apa itu API?</h3>
+      <p>API (Application Programming Interface) adalah jembatan yang menghubungkan satu aplikasi dengan aplikasi lain untuk bertukar data.</p>
+
+      
+      <div style="text-align:center; margin:15px 0;">
+        <img src="/img/api-diagram.png" alt="Diagram API" style="width:70%; max-width:500px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
+        <p style="font-size:14px; color:#555;">Gambar 1. Ilustrasi cara kerja API antara aplikasi dan server.</p>
+      </div>
+
+      <h3>3. API apa yang digunakan dalam aplikasi ini?</h3>
+      <p>Aplikasi ini menggunakan dua API utama:</p>
+      <ul>
+        <li><b>Mapbox API</b> → untuk mendapatkan koordinat lokasi (latitude & longitude).</li>
+        <li><b>Weatherstack API</b> → untuk mendapatkan informasi cuaca berdasarkan lokasi.</li>
+      </ul>
+
+     
+      <div style="text-align:center; margin:15px 0;">
+        <img src="/img/api-flow.png" alt="Alur Integrasi API" style="width:75%; max-width:550px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.2);">
+        <p style="font-size:14px; color:#555;">Gambar 2. Alur integrasi antara aplikasi, Mapbox API, dan Weatherstack API.</p>
+      </div>
+
+      <h3>4. Pola arsitektur API apa yang digunakan?</h3>
+      <p>Aplikasi ini menggunakan pola <b>RESTful API</b>, yaitu API yang berkomunikasi menggunakan HTTP (GET/POST) dan mengembalikan data dalam format JSON.</p>
+
+    </div>
+  </div>
+
+  {{>footer}}
+</body>
+</html>

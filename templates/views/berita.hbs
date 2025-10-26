@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{judul}}</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main-content">
+      {{>header}}
+      <h2>Berita Terbaru</h2>
+
+      {{#if error}}
+        <p style="color:red;">{{error}}</p>
+      {{else}}
+        {{#each berita}}
+          <div style="margin-bottom: 15px; border-bottom: 1px solid #ccc;">
+            <h3>{{this.title}}</h3>
+            <p>{{this.description}}</p>
+            <a href="{{this.url}}" target="_blank">Baca selengkapnya</a>
+          </div>
+        {{/each}}
+      {{/if}}
+    </div>
+
+    {{>footer}}
+  </body>
+</html>
